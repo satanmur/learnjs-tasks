@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<script>
+   'use strict'
+
+   function checkSpam(str) {
+
+      let lowStr = str.toLowerCase();
+      if ((lowStr.indexOf('xxx') != -1) || (lowStr.indexOf('viagra') != -1)) {
+         return true;
+      } else {
+         return false;
+      }
+   }
+
+   alert(checkSpam('buy ViAgRA now')); //true
+   alert(checkSpam('free xxxxx')); // true
+   alert(checkSpam("innocent rabbit")); //false
+
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<script>
+   'use strict'
+
+   function unique(arr) {
+
+      let messages = [
+         { text: "Hello", from: "John" },
+         { text: "How goes?", from: "John" },
+         { text: "See you soon", from: "Alice" }
+      ];
+
+      let readMessages = new WeakSet();
+
+      // Два сообщения были прочитаны
+      readMessages.add(messages[0]);
+      readMessages.add(messages[1]);
+      // readMessages содержит 2 элемента
+
+      readMessages.add(messages[0]);
+      // после повторного прочтения 
+      //readMessages по-прежнему содержит 2 элемента
+
+      alert("Read message 0: " + readMessages.has(messages[0])); // true: 
+      //сообщение message[0] было прочитано
+
+      messages.shift();
+      // теперь readMessages содержит 1 элемент
+
+   }
+
+</script>

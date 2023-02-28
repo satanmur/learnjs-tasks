@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<script>
+   'use strict';
+
+   function camelize(str) {
+
+      let newStr = str.split('-');
+      let newArr = newStr.map((item, index) => index == 0 ? item : item[0].toUpperCase() + item.slice(1));
+      return newArr.join('');
+   }
+
+   alert(camelize("background-color")); //backgroundColor
+   alert(camelize("list-style-image")); //listStyleImage
+   alert(camelize("-webkit-transition")); //WebkitTransition
+
+</script>
