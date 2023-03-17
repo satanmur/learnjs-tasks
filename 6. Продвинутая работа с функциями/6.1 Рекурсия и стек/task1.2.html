@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<script>
+   'use strict'
+
+   function sumTo(n) {
+
+      return (n != 1) ? n + sumTo(n - 1) : 1;
+   }
+
+   alert(sumTo(100)); // 5050
+
+</script>

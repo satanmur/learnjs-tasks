@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<script>
+   'use strict'
+   let hamster = {
+      stomach: [],
+
+      eat(food) {
+         // присвоение значения this.stomach вместо вызова this.stomach.push
+         this.stomach = [food];
+      }
+   };
+
+   let speedy = {
+      __proto__: hamster
+   };
+
+   let lazy = {
+      __proto__: hamster
+   };
+
+
+   speedy.eat("apple");
+   alert(speedy.stomach); // apple
+   alert(lazy.stomach); // пустое значение
+
+</script>

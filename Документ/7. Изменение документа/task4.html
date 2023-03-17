@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+   <h1>Создать список</h1>
+   <ul id="list">
+   </ul>
+
+   <script>
+      'use strict'
+
+      while (true) {
+
+         let text = prompt('Введите содержимое пункта списка', '');
+
+         if (!text) {
+            break;
+         }
+
+         let liLast = document.createElement('li');
+         liLast.textContent = text;
+         list.append(liLast);
+      }
+
+   </script>
+
+</body>
+
+</html>

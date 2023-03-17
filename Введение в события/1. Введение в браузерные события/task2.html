@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+   <meta charset="utf-8">
+</head>
+
+<body>
+   <!-- 2 варианта -->
+   <input type="button" id="hider" value="Нажмите, чтобы спрятать эту кнопку" />
+   <input type="button" onclick="this.hidden=true" value="Нажмите, чтобы спрятать эту кнопку">
+
+   <script>
+      'use strict'
+      let btn = document.getElementById('hider')
+      btn.onclick = function () {
+         btn.hidden = true;
+      }
+
+   </script>
+
+</body>
+
+</html>
